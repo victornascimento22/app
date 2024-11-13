@@ -13,7 +13,7 @@ export async function generateHiltiReport({
   startDate,
   endDate,
 }: ReportParams): Promise<Blob> {
-  const baseUrl = 'http://172.16.14.94:5000/';
+  const baseUrl = 'http://x:5000/';
   const params = new URLSearchParams();
 
   params.append('ref_ext', refExt.trim());
@@ -21,7 +21,7 @@ export async function generateHiltiReport({
   if (startDate) params.append('data_de', format(startDate, 'dd/MM/yyyy'));
   if (endDate) params.append('data_ate', format(endDate, 'dd/MM/yyyy'));
 
-  const url = `${baseUrl}/reportHilti?${params.toString()}`;
+  const url = `${baseUrl}/report?${params.toString()}`;
 
   console.log('Attempting to fetch from URL:', url);
   console.log('Request Parameters:', Object.fromEntries(params));
