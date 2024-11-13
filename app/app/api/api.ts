@@ -8,7 +8,7 @@ interface ReportParams {
   endDate: Date | null;
 }
 
-export async function generateHiltiReport({
+export async function generateReport({
   refExt,
   selectedTypes,
   startDate,
