@@ -7,10 +7,10 @@ import { RefExtInput } from './RefExtInput'
 import { NoteTypeSelector } from './NoteTypeSelector'
 import { DateSelector } from './DateSelector'
 import { GenerateReportButton } from './GenerateReportButton'
-import { generateHiltiReport } from '@/app/api/api'
+import { generateReport } from '@/app/api/api'
 import { Warn } from './Warn'
 
-export default function HiltiReportForm() {
+export default function ReportForm() {
   const [refExt, setRefExt] = useState<string>('')
   const [selectedTypes, setSelectedTypes] = useState<number[]>([])
   const [startDate, setStartDate] = useState<Date | null>(null)
@@ -34,7 +34,7 @@ export default function HiltiReportForm() {
   const handleGenerateReport = async () => {
     setIsLoading(true)
     try {
-      const reportData = await generateHiltiReport({
+      const reportData = await generateReport({
         refExt,
         selectedTypes: selectedTypes.map(Number),
         startDate,
@@ -77,7 +77,7 @@ export default function HiltiReportForm() {
     }
 
     try {
-      const blob = await generateHiltiReport({
+      const blob = await generateReport({
         refExt,
         selectedTypes,
         startDate: startDate || null,
@@ -92,7 +92,7 @@ export default function HiltiReportForm() {
   return (
     <div className="w-screen min-h-screen overflow-auto bg-fixed bg-cover bg-no-repeat flex justify-center items-center py-12" style={{backgroundImage: "url('https://www.capitaltrade.srv.br/wp-content/uploads/2024/10/background_CT_2024-1.png')"}}>
       <form onSubmit={handleSubmit} className="w-full max-w-2xl bg-gray-800 bg-opacity-50 p-8 rounded-lg shadow-lg font-panton">
-        <h1 className="text-center text-3xl font-panton text-white mb-8">RELATÓRIO HILTI</h1>
+        <h1 className="text-center text-3xl font-panton text-white mb-8">RELATÓRIO </h1>
        
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
           <RefExtInput value={refExt} onChange={(e) => setRefExt(e.target.value)} />
