@@ -1,9 +1,9 @@
-import HiltiReportForm from './components/ui/hilti-report-form/HiltiReportForm'
+import ReportForm from './components/ui/-report-form/ReportForm'
 
 export default function Home() {
   return (
     <main>
-      <HiltiReportForm />
+      <ReportForm />
     </main>
   )
 }
