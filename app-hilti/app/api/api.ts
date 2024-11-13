@@ -1,4 +1,5 @@
 import { format } from 'date-fns';
+//código para realizar a requisição ao servidor
 
 interface ReportParams {
   refExt: string;
