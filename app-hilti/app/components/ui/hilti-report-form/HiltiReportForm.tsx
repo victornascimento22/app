@@ -49,7 +49,7 @@ export default function HiltiReportForm() {
       const url = window.URL.createObjectURL(reportData)
       const a = document.createElement('a')
       a.href = url
-      a.download = 'relatorio_hilti.xlsx'
+      a.download = 'relatorio.xlsx'
       a.click()
       a.remove()
       window.URL.revokeObjectURL(url)
