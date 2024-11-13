@@ -1,4 +1,4 @@
-import ReportForm from './components/ui/-report-form/ReportForm'
+import ReportForm from './components/ui/report-form/ReportForm'
 
 export default function Home() {
   return (
