@@ -8,8 +8,8 @@ const panton = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Relatório Hilti",
-  description: "Gerador de relatórios Hilti",
+  title: "Relatório ",
+  description: "Gerador de relatórios ",
 };
 
 export default function RootLayout({
